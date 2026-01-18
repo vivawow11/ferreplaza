@@ -148,7 +148,14 @@ p {
     font-size: 2rem;
     cursor: pointer;
 }
-
+/* Imagen fija dentro del body */
+#valoresimage2 {
+  width: 90%;        /* se ajusta al ancho de la pantalla */
+  max-width: 600px;  /* no demasiado grande en desktop */
+  height: auto;      /* mantiene proporción */
+  display: block;
+  margin: 0 auto;    /* centra la imagen */
+}
 @media (max-width: 768px)
 {   
     body {
@@ -159,7 +166,13 @@ p {
     .menu-toggle {
         display: block;
     }
-
+    #valoresimage2 {
+    width: 100%;    /* ocupa todo el ancho del móvil */
+    max-width: none;
+    }
+    .slider {
+    width: 100%;
+    }
     .nav-right {
         display: none; /* inicialmente oculto */
         flex-direction: column;
@@ -184,9 +197,12 @@ p {
         display: flex;
     }
     .slider {
-        width: 100%;
-        max-width: 650px;
-        aspect-ratio: 16/9;
+        width: 90%;         /* ocupa casi todo el ancho */
+        max-width: 650px;   /* no se haga demasiado grande en desktop */
+        height: auto;       /* altura automática según proporción de la imagen */
+        margin: auto;
+        overflow: hidden;
+        border-radius: 12px;
 
     }
     .slide-container {
@@ -195,10 +211,9 @@ p {
         text-align: center;
     }
     .slide-image {
-        width: 80%;
-        height: auto; /* mantiene proporción */
-        transform: translateX(0);
-        opacity: 1;
+        width: 100%;       /* siempre ocupa el ancho del contenedor */
+        height: auto;      /* mantiene proporción */
+        object-fit: contain;
     }
     .slide-text {
         width: 100%;
