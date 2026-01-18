@@ -108,9 +108,13 @@ p {
 }
 
 .menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
+        display: block;
+        position: absolute; /* Ubicación absoluta dentro del header */
+        top: 15px;          /* Ajusta según altura del header */
+        right: 15px;        /* Ajusta según el margen deseado */
+        font-size: 2rem;    /* Tamaño legible */
+        cursor: pointer;
+        z-index: 1000;      /* Que esté siempre encima */
 }
 .tablapagos {/* Encabezado de tabla */
     width: 100%;
@@ -224,8 +228,10 @@ p {
         opacity: 1;
     }
     header {
-    flex-direction: column;
-    text-align: center;
+        position: relative; /* Permite que el menu-toggle se ubique relativo al header */
+        padding: 1rem 2rem; /* Reduce padding si es muy grande en móvil */
+        min-height: 60px;   /* Ajusta la altura */
+        flex-wrap: wrap;    /* Para que los elementos no se salgan */
     }
 
     .header-left {
@@ -543,4 +549,6 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
 }
+
+
 
