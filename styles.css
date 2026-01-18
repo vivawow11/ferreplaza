@@ -229,7 +229,7 @@ p {
     header {
         position: relative; /* Permite que el menu-toggle se ubique relativo al header */
         padding: 1rem 2rem; /* Reduce padding si es muy grande en móvil */
-        min-height: 60px;   /* Ajusta la altura */
+        min-height: 250px;   /* Ajusta la altura */
         flex-wrap: wrap;    /* Para que los elementos no se salgan */
     }
 
@@ -548,4 +548,5 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
 }
+
 
