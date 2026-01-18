@@ -1,0 +1,79 @@
+<!DOCTYPE html> <!-- Define que este documento usa HTML5 -->
+<html lang="es"> <!-- Idioma principal del documento: español -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres: UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive -->
+    <title>Ferreteria Ferreplaza</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Conecta el archivo CSS externo -->
+</head>
+<body>
+    
+<header>
+    <div class="header-left">
+        <img src="image1.png" alt="Logo de la empresa" id="logo">
+
+        <div class="titulo_index">
+            <h1>Ferreplaza de Cervantes</h1>
+            <h2>Todo en materiales para la construcción y acabados.</h2>
+        </div>
+    </div>
+
+    <nav class="nav-right" id="nav-menu">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="metodos.html" class="nav-link">Métodos de pago</a>
+        <a href="Promociones.html" class="nav-link">Promociones</a>
+        <a href="quienes.html" class="nav-link">Quiénes somos</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+    </nav>
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
+</script>
+
+    <main>
+        <section id="Quienes somos">
+            <h2>Quiénes somos</h2>
+            <p>Ferreplaza es una empresa, con una cultura organizacional enfocada en el trabajo en equipo y en la eficiencia empresarial, siendo guiada por sus claros objetivos y enfocando su atención al cumplimiento de su misión y visión.
+Su objetivo primordial es cambiar la forma tradicional de ofrecimiento de los productos, dándole así al cliente elementos de valor agregado que causen mayor satisfacción, razón por la cual consideran necesario contar con el personal que posea los conocimientos requeridos en las distintas líneas de producto brindado y pueda consigo ofrecer una asesoría efectiva..</p>
+        </section>
+        <section id="Vision">
+            <h2>Vision</h2>
+            <p>Ser la ferretería líder en la zona, sobresaliendo en la calidad de los materiales, precios competitivos y en el servicio personalizado y diferenciado con nuestros clientes</p>
+        </section>
+        <section id="Mision">
+            <h2> Mision</h2>
+            <p>Somos una empresa responsable de vender y distribuir materiales de construcción y afines, destacada por la cultura de servicio, ofrecer productos de calidad y el buen trato por parte de nuestro equipo de trabajo.</p>
+        </section>
+        <section id="Valores">
+            <h2>Valores</h2>
+            <ul class="valores-lista">
+                <li><strong>Trabajo en equipo:</strong> Colaboramos de forma coordinada para ofrecer una atención ágil, soluciones precisas y una mejor experiencia para cada cliente.</li>
+                <li><strong>Motivación:</strong> Trabajamos en un ambiente positivo que nos mantiene comprometidos, proactivos y enfocados en brindar un servicio de calidad al cliente.</li>
+                <li><strong>Responsabilidad social:</strong> Actuamos de manera ética y responsable, contribuyendo al bienestar de la comunidad y ofreciendo un servicio consciente y respetuoso con nuestro entorno.</li>
+                <li><strong>Honestidad:</strong> Actuamos con transparencia y sinceridad en cada interacción, garantizando confianza y claridad en nuestro servicio al cliente.</li>
+                <li><strong>Compromiso:</strong> Nos entregamos plenamente a nuestro trabajo, asegurando que cada acción esté orientada a ofrecer un servicio de calidad y cumplir con nuestras promesas.</li>
+            </ul>
+        </section>
+        <div>
+            <img src="image2.jpeg" alt="Imagen de Valores" id="valoresimage2">
+        </div>
+    </main>
+    
+
+    <footer>
+        <p>© 2026 - Todos los derechos reservados</p> <!-- Información de pie de página -->
+    </footer>
+
+    <script src="script.js"></script> <!-- Conecta el archivo JS externo, justo antes del cierre del body -->
+</body>
+</html>

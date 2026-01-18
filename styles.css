@@ -1,0 +1,483 @@
+/* RESET: elimina márgenes y paddings por defecto y ajusta box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ESTILOS GLOBALES: fuente, color de fondo y texto */
+body {
+    background-image: url(font1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;/* Header arriba, main al centro, footer abajo */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente legible y estándar */
+    background-color: #f4f4f4; /* Color de fondo gris claro */
+    color: #333; /* Color de texto oscuro */
+    line-height: 1.5; /* Altura de línea para mejorar lectura */
+}
+
+/* HEADER: estilo de la cabecera */
+header {
+    display: flex; /* Activa flexbox */
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente logo y texto */
+    gap: 15px; /* Espacio entre elementos (logo y h1) */
+    width: 100%;
+    background-color: #eb510a;
+    color: #fff;
+    min-height: 70px;
+    padding: 9rem 2rem;
+}
+
+.titulo_index h1{
+    font-family: 'Merriweather', sans-serif;   /* Tipo de letra */
+    font-size: 2.5rem;                  /* Tamaño */
+    font-weight: 700;                   /* Grosor */
+    color: #ffffff;                     /* Color */
+    margin: 0;                          /* Evita desbordes */
+    line-height: 1.2;                   /* Altura entre líneas */
+
+
+}
+.titulo_index h2{
+    font-family: 'Merriweather', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #eaeaea;
+    margin: 0;
+    line-height: 1.3;
+
+
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /*Espacio entre el logo y el H1 y H2 del header*/ 
+    flex-wrap: nowrap;
+}
+section{
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+/* Contenedor de columnas para InformacionGeneral */
+#InformacionGeneral .columnas1 {
+    display: flex !important;      /* fuerza layout horizontal */
+    justify-content: space-between; /* separa las columnas */
+    flex-wrap: wrap;               /* que bajen en móvil */
+    width: 100%;                   /* ocupa todo el ancho del section */
+    max-width: 900px;              /* ancho máximo deseado */
+    margin: 0 auto;                /* centra el bloque */
+    padding: 2 0rem;               /* opcional: padding lateral */
+    line-height: 2; /* aumenta el espacio entre líneas */
+    box-sizing: border-box;
+    text-align: left !important;   /* evita centrado heredado */
+}
+
+/* Cada columna */
+#InformacionGeneral .col {
+    flex: 1 1 45%;                 /* ancho relativo de cada columna */
+    min-width: 250px;               /* no se haga demasiado pequeña */
+    margin-bottom: 1rem;            /* separación vertical si se apilan */
+    font-size: 1.3rem;
+}
+
+p {
+    line-height: 1.2;     /* Altura entre líneas */
+    font-size: 1.2rem;   /* Tamaño del texto */
+    line-height: 1.6;    /* Altura entre líneas */
+    color: #333;         /* Color del texto */
+}
+
+/* LOGO en el header */
+#logo {
+    height: 150px; /* Altura fija del logo */
+    vertical-align: middle; /* Alineación vertical con el texto */
+    margin-right: 0rem; /* Espacio entre logo y título */
+}
+
+#valoresimage2 {
+    height: 600px; /* Altura fija del logo */
+    vertical-align: middle; /* Alineación vertical con el texto */
+    margin-right: 10px; /* Espacio entre logo y título */
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.tablapagos {/* Encabezado de tabla */
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto; /* centra la tabla */
+    border-collapse: separate;
+    border-spacing: 0 0; /* separación vertical entre filas */
+}
+
+.tablapagos thead th {
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+.tablapagos td {
+    padding: 0.75rem 1rem; /* separación interna */
+    text-align: center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.tablapagos tbody tr {
+    background-color: #fff;
+}
+
+
+/* Contenedor derecho */
+.nav-right {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 1500px)
+{   
+    
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-right {
+        display: none; /* inicialmente oculto */
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        background-color: rgba(0,0,0,0.9);
+        position: absolute; /* CLAVE: sobre el resto */
+        top: 60px; /* altura aproximada del header, ajusta si es necesario */
+        left: 0;
+        text-align: center;
+        padding: 1rem 0;
+        z-index: 9999; /* CLAVE: encima de footer y demás */
+    }
+
+    .nav-right a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+    .slider {
+        width: 90vw;
+        height: 220px;
+    }
+    .slide-container {
+        flex-direction: column;
+        height: auto; /* ajusta automáticamente */
+        text-align: center;
+    }
+    .slide-image {
+        width: 80%;
+        height: auto; /* mantiene proporción */
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .slide-text {
+        width: 100%;
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+/*Seccion de imagenes que se deslizan de los lados*/
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 2rem;
+  overflow: hidden; /* recorta todo lo que sobresalga del hero */
+  font-size: 1rem; 
+
+}
+
+.hero-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 2rem;
+  overflow: hidden; /* recorta todo lo que sobresalga del hero */
+  font-size: 1.2rem; 
+
+}
+
+/* Contenedor fijo para la imagen */
+.hero-slider {
+  width: 300px;       /* ancho fijo */
+  height: 200px;      /* altura fija */
+  overflow: hidden;   /* muy importante */
+  position: relative;
+  flex-shrink: 0;     /* evita que el flex lo comprima */
+}
+
+/* Imagen animada */
+/* Imagen deslizando desde la izquierda */
+.slide-in 
+{
+position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: slideInImage 2s ease-out forwards;
+}
+
+@keyframes slideInImage {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* Texto deslizando desde la derecha */
+.slide-text {
+  transform: translateX(100%); /* empieza fuera a la derecha */
+  opacity: 0;
+  animation: slideInText 2s ease-out forwards;
+  animation-delay: 0.3s; /* retraso opcional para que no coincida exactamente con la imagen */
+}
+
+@keyframes slideInText {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/*----------------------------------------------------------------------
+/* Contenedor que divide la pantalla */
+.slider-wrapper {
+    display: flex;
+    justify-content: flex-start; /* vuelve a la izquierda */
+    width: 100%;
+    margin: 2rem 0; /* margen razonable */
+    padding-left: 2rem; /* separación visual */
+}
+/* Slider ocupa 1/3 del ancho */
+.slider {
+    position: relative;   /* Permite posicionar botones encima */
+    width: 650px;         /* Ancho más pequeño */
+    margin: auto;         /* Centrar horizontalmente */
+    overflow: hidden;     /* Oculta lo que sobresalga */
+    border-radius: 12px;  /* Bordes redondeados */ /* fondo para espacios vacíos */
+}
+
+/* Slides */
+.slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Ajuste de imágenes SIN recorte */
+.slides img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: contain; /* CLAVE: no se cortan */
+    border-radius: 12px;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s ease;
+}
+
+.panel.activo {
+  max-height: 600px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 15px;
+}
+.btn-cat {
+  background-color: #eb510a;      /* color base */
+  color: white;                   /* texto blanco */
+  border: none;                   /* sin borde por defecto */
+  border-radius: 8px;             /* bordes redondeados */
+  padding: 10px 20px;             /* espacio interno */
+  margin: 5px;                     /* separación entre botones */
+  font-size: 1rem;                 /* tamaño de texto */
+  font-weight: bold;               /* negrita */
+  cursor: pointer;                 /* indica clickeable */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* sombra ligera */
+  transition: all 0.3s ease;       /* transición suave para hover */
+}
+
+.btn-cat:hover {
+  background-color: #ff7a2f;      /* color más claro al pasar el mouse */
+  transform: translateY(-2px);    /* ligero movimiento hacia arriba */
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2); /* sombra más marcada */
+}
+
+#Construccion ul { font-size: 1.7rem; }
+#Electrico ul { font-size: 1.7rem; }
+#Equipo ul { font-size: 1.7rem; }
+#Madera ul { font-size: 1.7rem; }
+#Pintura ul { font-size: 1.7rem; }
+#PVC ul { font-size: 1.7rem; }
+#Tornilleria ul { font-size: 1.7rem; }
+#Acabados ul { font-size: 1.7rem; }
+
+/*-----------------------------------------------------------------------------------------*/
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-left img {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Links */
+.nav-link {
+    color: white;
+    margin-right: auto;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+
+
+/* MAIN: sección principal */
+main {
+    padding: 2rem; /* Espacio interno alrededor del contenido */
+    text-align: center; /* Centra contenido */
+    flex: 1;
+}
+.InformacionGeneral{
+    line-height: 3
+}
+
+
+/*  */
+button:hover {
+    background-color: #005fa3; /* Azul más oscuro */
+}
+
+/* UBICACION DE MAPAS */
+.maps-wrapper {
+  display: flex;
+  gap: 100px;          /* espacio entre mapas */
+  flex-wrap: wrap;     /* permite que bajen en pantallas pequeñas */
+}
+.map-container {
+  flex: 1 1 45%;       /* ancho relativo al contenedor */
+  min-width: 250px;    /* no se hace demasiado pequeño */
+  height: 400px;       /* altura base del mapa */
+  box-sizing: border-box;
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    font-size: 1.8rem;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+
+
+#valores ul {
+    max-width: 800px;
+    margin: 0 auto;      /* centra el bloque */
+    text-align: left;    /* CLAVE: texto alineado correctamente */
+}
+
+.valores-lista {
+    list-style: none;
+    padding-left: 1.2rem;  /* controla distancia viñeta-texto */
+}
+
+.valores-lista li {
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+/* FOOTER: estilo de pie de página */
+footer {
+    background-color: #eb510a; /* Fondo oscuro */
+    min-height: 40px;
+    padding: 1px 30px;
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centrado del texto */
+    padding: 1rem; /* Espaciado interno */
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+}
+html, body {
+    height: 100%; /* Ocupan toda la altura del navegador */
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
