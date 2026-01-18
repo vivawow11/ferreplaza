@@ -296,7 +296,6 @@ p {
   margin: 0 auto;
   gap: 2rem;
   overflow: hidden;
-  border: 2px solid red; /* Borde rojo de 2px */
 
 }
 
@@ -557,4 +556,5 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
 }
+
 
