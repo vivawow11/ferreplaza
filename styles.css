@@ -202,6 +202,10 @@ p {
         border-radius: 12px;
 
     }
+    .arrow {
+        font-size: 1.2rem;
+        padding: 0.3rem 0.5rem;
+    }
     .slide-container {
         flex-direction: column;
         height: auto; /* ajusta automáticamente */
@@ -539,3 +543,4 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
 }
+
