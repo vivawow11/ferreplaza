@@ -108,13 +108,9 @@ p {
 }
 
 .menu-toggle {
-        display: block;
-        position: absolute; /* Ubicación absoluta dentro del header */
-        top: 15px;          /* Ajusta según altura del header */
-        right: 15px;        /* Ajusta según el margen deseado */
-        font-size: 2rem;    /* Tamaño legible */
-        cursor: pointer;
-        z-index: 1000;      /* Que esté siempre encima */
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 .tablapagos {/* Encabezado de tabla */
     width: 100%;
@@ -147,11 +143,7 @@ p {
     font-size: 1.5rem;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-}
+
 /* Imagen fija dentro del body */
 #valoresimage2 {
   width: 90%;        /* se ajusta al ancho de la pantalla */
@@ -169,6 +161,13 @@ p {
     }
     .menu-toggle {
         display: block;
+        display: block;
+        position: absolute; /* Ubicación absoluta dentro del header */
+        top: 15px;          /* Ajusta según altura del header */
+        right: 15px;        /* Ajusta según el margen deseado */
+        font-size: 2rem;    /* Tamaño legible */
+        cursor: pointer;
+        z-index: 1000;      /* Que esté siempre encima */
     }
     #valoresimage2 {
     width: 100%;    /* ocupa todo el ancho del móvil */
@@ -549,6 +548,4 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
 }
-
-
 
