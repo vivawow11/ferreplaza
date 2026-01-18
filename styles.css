@@ -227,15 +227,17 @@ p {
         opacity: 1;
     }
     header {
-        position: relative; /* Permite que el menu-toggle se ubique relativo al header */
-        padding: 1rem 2rem; /* Reduce padding si es muy grande en móvil */
-        min-height: 300px;   /* Ajusta la altura */
-        flex-wrap: wrap;    /* Para que los elementos no se salgan */
+        position: relative;       /* Para que el menu-toggle se ubique relativo al header */
+        flex-wrap: wrap;          /* Permite que los elementos bajen */
+        padding: 1rem 2rem;       /* Padding más pequeño */
+        min-height: auto;         /* Que la altura se ajuste al contenido */
     }
 
     .header-left {
-    flex-direction: column;
-    gap: 1rem;
+        flex-direction: column;   /* Logo arriba, h1 y h2 abajo */
+        align-items: flex-start;  /* Opcional: alinea a la izquierda */
+        gap: 0.5rem;              /* Espacio entre logo y texto */
+        width: 100%;              /* Ocupa todo el ancho */
     }
 
     .titulo_index h1 {
@@ -272,7 +274,7 @@ p {
     height: 300px;
     }
     #logo {
-        height: 100px; /* ajusta tamaño para que quepa */
+        height: 80px; /* ajusta tamaño para que quepa */
         margin-bottom: 0.5rem;
     }
 }
@@ -548,4 +550,3 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
 }
-
